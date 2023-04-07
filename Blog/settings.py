@@ -128,3 +128,9 @@ STATIC_ROOT = './static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://0.0.0.0:8080'
+]
+CORS_ORIGIN_WHITELIST = [
+    'http://0.0.0.0:8080'
+]
