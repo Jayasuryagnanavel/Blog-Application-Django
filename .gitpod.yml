@@ -1,5 +1,5 @@
 ports:
-- port: 3000
+- port: 8080
   onOpen: open-preview
 tasks:
 - init: >
@@ -8,8 +8,8 @@ tasks:
   command: >
     echo "from Blog.settings import *" > Blog/local_settings.py &&
     echo "ALLOWED_HOSTS = ['*']" >> Blog/local_settings.py &&
-    export DJANGO_SETTINGS_MODULE=uum_project.local_settings &&
-    python3 manage.py runserver 0.0.0.0:3000 --insecure
+    export DJANGO_SETTINGS_MODULE=Blog.local_settings &&
+    python3 manage.py runserver 0.0.0.0:8080
 github:
     prebuilds:
         pullRequestsFromForks: true
